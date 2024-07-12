@@ -1,0 +1,65 @@
+@media (min-width:768px) {
+  .layouts {
+    width: 100%;
+    height: 100%;
+    padding: 1rem 0;
+  }
+
+  .introduction {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    width: 20rem;
+    height: calc(100% - 2rem);
+    background-color: #fff;
+    border-radius: 1rem;
+  }
+
+  .main {
+    width: calc(100% - 36rem);
+    margin-left: 26rem;
+
+    >* {
+      margin-bottom: 1rem;
+      background-color: #fff;
+    }
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    width: 4rem;
+    height: calc(100% - 2rem);
+    background-color: red;
+  }
+}
+
+@media (max-width:768px) {
+  .layouts {
+    width: 100%;
+    height: 100%;
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .introduction {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 1rem;
+  }
+
+  .main {
+    width: 100%;
+  }
+
+  .sidebar {
+    width: 8rem;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background-color: red;
+  }
+}
