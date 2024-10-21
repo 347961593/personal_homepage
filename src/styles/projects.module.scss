@@ -10,18 +10,26 @@
   .content {
     display: flex;
     gap: 2rem;
+    flex-wrap: wrap;
   }
 }
 .introduceCard {
-  width: 20rem;
+  flex: 1;
+  min-width: 14rem;
+  max-width: 30rem;
+  border-radius: 1rem;
   box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
   .cardTitle {
-    padding: 1rem;
+    height: 4rem;
+    padding: 0 1rem;
     border-bottom: 1px solid #E8E8E8;
     font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   .cardContent {
-    padding: 0 1rem 1rem;
+    padding: 1rem;
   }
 }

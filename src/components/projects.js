@@ -1,6 +1,7 @@
 import styles from "@styles/projects.module.scss";
 import Image from "next/image";
 import oasis from "../imgs/oasis.svg";
+import click from "../imgs/click.svg";
 function IntroduceCard(props) {
   return (
     <div className={`${styles.introduceCard}`}>
@@ -10,8 +11,9 @@ function IntroduceCard(props) {
   );
 }
 const oasisTitle = (
-  <a href="https://www.oasisscan.com/" target="_blank">
+  <a href="https://www.oasisscan.com/" target="_blank" style={{display:'flex',alignItems: 'center',justifyContent: 'space-between'}}>
     <Image src={oasis} alt="oasis" height={40} />
+    <Image src={click} alt="" width={20} height={20} />
   </a>
 );
 const projList = [
