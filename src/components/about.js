@@ -3,7 +3,8 @@ import styles from "@styles/about.module.scss";
 import right from "../imgs/right.gif";
 
 export default function About() {
-  const introduction = "您好，我叫白晨阳，我正在求职前端开发工作。我的工作能力包括：";
+  const introduction =
+    "您好，我叫白晨阳，我正在求职前端开发工作。我的工作能力包括：";
   const advantagesList = [
     "系统性前端知识与技术。",
     "良好的沟通协调能力。",
@@ -17,9 +18,7 @@ export default function About() {
       <div>{introduction}</div>
       {advantagesList.map((item, index) => (
         <div className={`${styles.desc}`} key={index}>
-          <div className={`${styles.imgDiv}`}>
-            <Image src={right} alt="" />
-          </div>
+          <Image src={right} alt="" width={24} height={24} />
           <span>{item}</span>
         </div>
       ))}
