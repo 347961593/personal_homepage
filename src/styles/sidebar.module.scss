@@ -1,0 +1,28 @@
+@media (min-width:768px) {
+    .sidebarMain {
+        border: 1px solid #7C7D7F;
+        border-radius: 2.5rem;
+        padding: 2.5rem 1.5rem;
+    }
+
+    .imgDiv {
+        width: 1.5rem;
+        height: 1.5rem;
+        position: relative;
+        cursor: pointer;
+
+        &:nth-child(n+2) {
+            margin-top: 1.5rem;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+    }
+}
+
+@media (max-width:768px) {
+    .sidebarMain {}
+}

@@ -28,7 +28,7 @@ export default function Introduction() {
       </div>
       <div className={`${styles.introduction_center}`}>
         {desc.map((item, index) => (
-          <div className={`${styles.desc}`}>
+          <div className={`${styles.desc}`} key={index}>
             <span>{item.value}</span>
             <span>{item.label}</span>
           </div>
@@ -38,7 +38,7 @@ export default function Introduction() {
         <span>技能</span>
         <div className={`${styles.skill}`}>
           {skill.map((item, index) => (
-            <div className={`${styles.skill_item}`}>
+            <div className={`${styles.skill_item}`} key={index}>
               <div>{item.label}</div>
               <span>{item.value}</span>
             </div>

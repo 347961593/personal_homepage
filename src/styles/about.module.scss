@@ -1,0 +1,25 @@
+.about {
+  .title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    .title_color {
+      color: #00bc91;
+      font-weight: bolder;
+    }
+  }
+  .desc{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  .imgDiv{
+    width: 1.5rem;
+    height: 1.5rem;
+    position: relative;
+    img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
+  }
+}
