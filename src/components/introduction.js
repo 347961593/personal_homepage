@@ -4,8 +4,8 @@ import styles from '@styles/introduction.module.scss'
 
 export default function Introduction() {
   const desc = [
-    { value: 'school', label: 'XXX' },
-    { value: 'age', label: '111' }
+    { value: 'school', label: '河北经贸大学' },
+    { value: 'age', label: '31' }
   ]
   const skill = [
     { value: 'html', label: '90%' },
@@ -21,9 +21,9 @@ export default function Introduction() {
           <Image src={profilePic} alt="Picture of the author" />
         </div>
         <div>
-          <span>姓名</span>
+          <span>白晨阳</span>
           <br />
-          <span>职业</span>
+          <span>前端开发</span>
         </div>
       </div>
       <div className={`${styles.introduction_center}`}>
