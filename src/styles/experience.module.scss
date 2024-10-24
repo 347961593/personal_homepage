@@ -10,7 +10,8 @@
   .content {
     display: flex;
     flex-wrap: wrap;
-    gap: 4rem;
+    row-gap: 1rem;
+    column-gap: 2rem;
     .contentLeft,
     .contentRight {
       flex: 1;

@@ -59,7 +59,6 @@ export default function Experience() {
               <div className={`${styles.school}`}>
                 <div>{item.school}</div>
                 <div>{item.major}</div>
-                <div>{item.level}</div>
               </div>
             </div>
           ))}

@@ -18,7 +18,7 @@ export default function About() {
       <div>{introduction}</div>
       {advantagesList.map((item, index) => (
         <div className={`${styles.desc}`} key={index}>
-          <Image src={right} alt="" width={24} height={24} />
+          <Image src={right} alt="" width={32} height={32} />
           <span>{item}</span>
         </div>
       ))}
