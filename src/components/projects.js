@@ -69,7 +69,7 @@ const projList = [
   {
     title: myhomepageTitle,
     content:
-      "这是我的个人主页，大家可以访问了解我的个人信息、工作技能、参与项目、工作经历等。",
+      "这是我的个人主页，可访问了解我的个人信息、工作技能、参与项目、工作经历等。",
       foot: "技术栈：react、next、material"
   },
   {
