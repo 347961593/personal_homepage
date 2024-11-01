@@ -2,6 +2,7 @@ import Image from "next/image";
 import Tooltip, { tooltipClasses } from "@mui/material/Tooltip";
 import { styled } from "@mui/material/styles";
 import styles from "@styles/sidebar.module.scss";
+import home from "../imgs/sidebar/home.svg";
 import about from "../imgs/sidebar/about.svg";
 import skills from "../imgs/sidebar/skills.svg";
 import projects from "../imgs/sidebar/projects.svg";
@@ -19,6 +20,7 @@ export default function Sidebar() {
     },
   }));
   const iconList = [
+    { value: home, label: "home" },
     { value: about, label: "about" },
     { value: skills, label: "skills" },
     { value: projects, label: "projects" },
