@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 import profilePic from "../imgs/profile.svg";
+import Weixin from "../imgs/weixin.jpg";
 import styles from "@styles/introduction.module.scss";
 
 export default function Introduction() {
@@ -23,7 +24,7 @@ export default function Introduction() {
   //     clearInterval(timer);
   //   };
   // }, []);
-
+  const [weixinDiaplay, setWeixinDiaplay] = useState("none");
   useEffect(() => {
     for (let i = 0; i < skill.length; i++) {
       var canvas = document.getElementById("canvas" + i);
@@ -47,6 +48,8 @@ export default function Introduction() {
     { value: "学校：", label: "河北经贸大学" },
     { value: "学历：", label: "本科" },
     { value: "出生年月：", label: "199303" },
+    { value: "所在地区：", label: "石家庄市" },
+    { value: "工作状态：", label: "离职" },
   ];
   const skill = [
     { value: "html", label: 0.9 },
@@ -67,6 +70,24 @@ export default function Introduction() {
         </div>
       </div>
       <div className={`${styles.introduction_center}`}>
+        <div className={`${styles.connect}`}>
+          <span
+            onClick={() =>
+              weixinDiaplay === "none"
+                ? setWeixinDiaplay("block")
+                : setWeixinDiaplay("none")
+            }
+          >
+            联系我
+          </span>
+          <Image
+            src={Weixin}
+            alt="weixin"
+            width={0}
+            height={0}
+            style={{ display: weixinDiaplay, width: "100%", height: "auto" }}
+          />
+        </div>
         {desc.map((item, index) => (
           <div className={`${styles.desc}`} key={index}>
             <span>{item.value}</span>
@@ -79,7 +100,6 @@ export default function Introduction() {
         <div className={`${styles.skills}`}>
           {skill.map((item, index) => (
             <div className={`${styles.skill}`} key={index}>
-              {/* <div>{item.label}</div> */}
               <canvas id={"canvas" + index} width="72" height="72">
                 {item.label}
               </canvas>
