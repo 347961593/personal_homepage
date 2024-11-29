@@ -6,24 +6,20 @@ import styles from "@styles/introduction.module.scss";
 
 export default function Introduction() {
   const [position, setPosition] = useState("前端开发");
-  // const latestPosition = useRef(position);
-  // const positionLabel = "前端开发";
-
-  // useEffect(() => {
-  //   latestPosition.current = position;
-  // }, [position]);
-
-  // useEffect(() => {
-  //   const timer = setInterval(() => {
-  //     let label =
-  //       latestPosition.current +
-  //       positionLabel.charAt(latestPosition.current.length);
-  //     setPosition(label);
-  //   }, 1000);
-  //   return () => {
-  //     clearInterval(timer);
-  //   };
-  // }, []);
+  const positionLabel = "前端开发";
+  const connectLabel = "联系我";
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (position === "前端开发") {
+        setPosition(connectLabel);
+      } else {
+        setPosition(positionLabel);
+      }
+    }, 2400);
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [position]);
   const [weixinDiaplay, setWeixinDiaplay] = useState("none");
   useEffect(() => {
     for (let i = 0; i < skill.length; i++) {
@@ -48,8 +44,7 @@ export default function Introduction() {
     { value: "学校：", label: "河北经贸大学" },
     { value: "学历：", label: "本科" },
     { value: "出生年月：", label: "199303" },
-    { value: "所在地区：", label: "石家庄市" },
-    { value: "工作状态：", label: "离职" },
+    { value: "所在地区：", label: "石家庄市" }
   ];
   const skill = [
     { value: "html", label: 0.9 },
@@ -66,28 +61,32 @@ export default function Introduction() {
         </div>
         <div className={`${styles.label}`}>
           <div className={`${styles.name}`}>白晨阳</div>
-          <div className={`${styles.position}`}>{position}</div>
+          <div
+            className={`${
+              position === "前端开发" ? styles.position : styles.connect
+            }`}
+          >
+            <span
+              onClick={() =>
+                position === "联系我" &&
+                (weixinDiaplay === "none"
+                  ? setWeixinDiaplay("block")
+                  : setWeixinDiaplay("none"))
+              }
+            >
+              {position}
+            </span>
+            <Image
+              src={Weixin}
+              alt="weixin"
+              width={0}
+              height={0}
+              style={{ display: weixinDiaplay, width: "100%", height: "auto" }}
+            />
+          </div>
         </div>
       </div>
       <div className={`${styles.introduction_center}`}>
-        <div className={`${styles.connect}`}>
-          <span
-            onClick={() =>
-              weixinDiaplay === "none"
-                ? setWeixinDiaplay("block")
-                : setWeixinDiaplay("none")
-            }
-          >
-            联系我
-          </span>
-          <Image
-            src={Weixin}
-            alt="weixin"
-            width={0}
-            height={0}
-            style={{ display: weixinDiaplay, width: "100%", height: "auto" }}
-          />
-        </div>
         {desc.map((item, index) => (
           <div className={`${styles.desc}`} key={index}>
             <span>{item.value}</span>
