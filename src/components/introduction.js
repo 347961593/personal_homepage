@@ -15,7 +15,7 @@ export default function Introduction() {
       } else {
         setPosition(positionLabel);
       }
-    }, 2400);
+    }, 1500);
     return () => {
       clearTimeout(timer);
     };
