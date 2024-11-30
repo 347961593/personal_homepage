@@ -2,6 +2,7 @@ import styles from "@styles/projects.module.scss";
 import Image from "next/image";
 import oasis from "../imgs/oasis.svg";
 import click from "../imgs/click.svg";
+import github from "../imgs/github.svg";
 import favicon from "../../public/favicon.png";
 function IntroduceCard(props) {
   return (
@@ -23,41 +24,71 @@ function CardContent(props) {
   ));
 }
 const oasisTitle = (
-  <a
-    href="https://www.oasisscan.com/"
-    target="_blank"
+  <div
     style={{
       display: "flex",
       alignItems: "center",
       justifyContent: "space-between",
     }}
   >
-    <Image src={oasis} alt="oasis" height={40} />
-    <Image src={click} alt="" width={20} height={20} />
-  </a>
-);
-const myhomepageTitle = (
-  <a
-    href="https://bcy-resume.romever.fun/"
-    target="_blank"
-    style={{
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "space-between",
-    }}
-  >
-    <div
+    <a
+      href="https://www.oasisscan.com/"
+      target="_blank"
       style={{
         display: "flex",
         alignItems: "center",
-        gap: "0.5rem",
       }}
     >
-      <Image src={favicon} alt="myhomepage" height={24} />
-      <span>My Homepage</span>
-    </div>
-    <Image src={click} alt="" width={20} height={20} />
-  </a>
+      <Image src={oasis} alt="oasis" height={40} />
+      <Image src={click} alt="" width={20} height={20} />
+    </a>
+    <Image
+      src={github}
+      alt=""
+      width={20}
+      height={20}
+      onClick={() =>
+        window.open("https://github.com/bitcat365/oasisscan-frontend", "_blank")
+      }
+      style={{
+        cursor: "pointer",
+      }}
+    />
+  </div>
+);
+const myhomepageTitle = (
+  <div
+    style={{
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "space-between",
+    }}
+  >
+    <a href="https://bcy-resume.romever.fun/" target="_blank">
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          gap: "0.5rem",
+        }}
+      >
+        <Image src={favicon} alt="myhomepage" height={24} />
+        <span>My Homepage</span>
+      </div>
+    </a>
+    <Image
+      src={github}
+      alt=""
+      width={20}
+      height={20}
+      onClick={() =>
+        window.open("https://github.com/347961593/personal_homepage", "_blank")
+      }
+      style={{
+        cursor: "pointer",
+      }}
+    />
+  </div>
 );
 const projList = [
   {
@@ -70,7 +101,7 @@ const projList = [
     title: myhomepageTitle,
     content:
       "这是我的个人主页，可访问了解我的个人信息、工作技能、参与项目、工作学习经历等。",
-      foot: "技术栈：react、next、material"
+    foot: "技术栈：react、next、material",
   },
   {
     title: "人力智慧运营",
