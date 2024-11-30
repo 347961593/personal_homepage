@@ -51,7 +51,7 @@ export default function Introduction() {
     { value: "css", label: 0.9 },
     { value: "js", label: 0.9 },
     { value: "vue", label: 0.9 },
-    { value: "react", label: 0.6 },
+    { value: "react", label: 0.7 },
   ];
   return (
     <article className={`${styles.introduction}`}>
